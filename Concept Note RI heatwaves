@@ -1,0 +1,65 @@
+**Concept Note**  
+**Title:** Examining the Timeliness of DTP Vaccination During Heatwaves
+
+**Background**  
+Heatwaves are increasing in frequency, duration, and intensity due to climate change, with significant implications for public health systems. Evidence suggests that extreme heat can disrupt healthcare access by reducing mobility, increasing caregiver burden, straining health facility operations, and influencing health-seeking behaviour. Timely administration of the diphtheria-tetanus-pertussis (DTP) vaccine is essential for preventing early childhood morbidity and mortality. However, little is known about whether heatwave conditions affect the timeliness of routine childhood vaccinations, particularly in low-resource settings where climate resilience and health system capacity may be limited.
+
+**Purpose of the Study**  
+This analysis aims to scope the availability of cross-sectional data to examine how heatwaves influence the timeliness of DTP vaccination among infants. Upon identification of suitable datasets collected at appropriate times, preliminary analysis will be developed to examine evidence for delays in vaccination.
+
+The analysis seeks to determine whether children scheduled for DTP doses during heatwave periods experience higher rates of delayed vaccination compared to those scheduled during non-heatwave periods.
+
+**Objectives**
+
+- **To scope publicly available datasets (ie. MICS and DHS) for time periods where heatwaves had been reported in country**
+- **To define space-time windows when heat waves are occurring based on meterological data**
+- **To identify appropriate analysis plan to examine the effect of heatwaves on the timeliness of vaccination, while accounting for confounding factors**
+- **To carry out preliminary analysis as planned in Obj 3.**
+
+**Preliminary Data**
+
+**_Example: Nigeria 2024 DHS,_**
+
+- **Fieldwork carried out 12/2023- 05/2024**
+- **Children born in last 3 years had details from their vaccination card noted in the records, otherwise based on recall. ~60% of children have vaccination cards.**
+- **So we are looking for heatwaves in Nigeria between 2021 and 2023. This study**<sup>[\[1\]](#footnote-1)</sup>**, although not a great study does include a few references to recent heatwaves in Nigeria during this time. Includes a heatwave in Sokoto in 2023 where temperatures reached 47oC.**<sup>[\[2\]](#footnote-2)</sup>
+
+**_ERA5 data from Nigeria,_**
+
+- **Available for the time period**
+- **A heatwave is defined quite vaguely, but a "sustained period of hot weather that exceeds that found in the local area"**
+- **Basic steps would be,**
+  - **Download "ERA5-Land hourly data from 1950 to present" for a select number of locations (ie. GPS co-ords for DHS),**<sup>[\[3\]](#footnote-3)</sup>
+  - **Compare the 2021-2023 temp data to previous data (how many years?) to identify space-time windows where heat waves have occurred.**<sup>[\[4\]](#footnote-4)</sup>
+
+**_Potential analysis plan_**
+
+- Outcome: timeliness of DTP vaccination based on WHO-recommended vaccination intervals. Should be days, and might be roughly (log)-normally distributed. Could also explore impact on ever being vaccinated, ie. was the window completely missed?
+- Explanatory variable: whether or not the childs "vaccination window" occurred during a heatwave
+- Full dataset will consist of majority of children having their vaccination in the absence of a heatwave. So "heatwave" children will likely be small in number from very specific locations. This points towards some sort of matching process to control for confounders and sensibly power the analysis toward observations/children that experienced heatwaves.
+  - Lots of data exploration and plots needed here
+- Also need to adjust for confounders such as distance to health facilities, maternal education, and rural/urban status.
+
+**Significance**  
+Findings will inform national immunization programs and climate-health planners by identifying periods of heightened vulnerability and the extent to which heatwaves have a permanent impact on vaccination.
+
+**Skills that will be developed**
+
+- Working with climate/weather/GIS data
+- Statistical analysis, including spatial/time-series analysis
+- Critical thinking
+- Working with programmes: R and Python
+
+**Preferred skills of student**
+
+- Proficiency in R / Python (either taught at LSHTM or learnt independently)
+- Advanced statistics
+- Understanding and interest in vaccine epidemiology
+
+- <https://www.sciencedirect.com/science/article/pii/S0301479725034097#bib98> [↑](#footnote-ref-1)
+
+- <https://www.carbonbrief.org/how-nigeria-is-reeling-from-extreme-heat-fuelled-by-climate-change/> [↑](#footnote-ref-2)
+
+- <https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download> [↑](#footnote-ref-3)
+
+- Analysis similar to <https://www.imperial.ac.uk/media/imperial-college/grantham-institute/public/publications/institute-reports-and-analytical-notes/Climate-change-tripled-heat-related-deaths-in-early-summer-European-heatwave.pdf> [↑](#footnote-ref-4)
